@@ -13,7 +13,6 @@ export default function App() {
 
   return (
     <div style={{
-      height: windowDimensions.height,
       display: "grid",
       gridTemplateColumns: "53px auto",
       gridTemplateRows: "min-content",
@@ -35,9 +34,13 @@ export default function App() {
         />
       </div>
       <SideNavigation categories={["Sale", "New arrivals", "Popular"]}/>
-      <Products/>
-
-      <p>lol)))</p>
+      <Products products={[
+        {name: "Apep Pro Max III", price: 10, rating: 0.75},
+        {name: "Apep Pro Max III", price: 10, rating: 0.75},
+        {name: "Apep Pro Max III", price: 10, rating: 0.75},
+        {name: "Apep Pro Max III", price: 10, rating: 0.75},
+        {name: "Apep Pro Max III", price: 10, rating: 0.75},
+      ]}/>
     </div>
   );
 }
