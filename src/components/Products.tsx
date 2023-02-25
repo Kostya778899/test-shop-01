@@ -2,29 +2,13 @@ import React from "react";
 import NikeIcon from "../icons/logos/nike-01.svg";
 import FavoriteIcon from "../icons/favorite.svg";
 import Price from "./Price";
+import Rating from "./Rating";
 
 export default function Products(props: {products: Product[]}) {
   return (
     <div className={"products"}>
       {props.products.map((product, index) =>
         <div className={"product"}>
-          {/*<div style={{
-            padding: "7px 20px 0 20px",
-            display: "flex",
-            justifyContent: "space-between",
-          }}>
-            <img src={NikeIcon}/>
-            <img src={FavoriteIcon}/>
-          </div>*/}
-          {/*<img src={NikeIcon} style={{left: 20, top: 7}}/>
-          <img src={FavoriteIcon} style={{right: 20, top: 19}}/>
-          <img src={""} style={{top: 10, right: 0, bottom: 10, left: 0, backgroundColor: "red"}}/>
-          <div style={{left: 22, bottom: 33}}>
-            <p>{product.name}</p>
-            <p>${product.price}</p>
-          </div>
-          <p style={{right: 22, bottom: 44}}>${product.rating}</p>*/}
-
           <img src={NikeIcon} style={{gridArea: "brand-logo"}}/>
           <img src={FavoriteIcon} style={{gridArea: "favorite-button"}}/>
           <div style={{
@@ -35,6 +19,7 @@ export default function Products(props: {products: Product[]}) {
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
+            //backgroundColor: "red",
           }}/>
           <p style={{
             gridArea: "name",
@@ -43,7 +28,8 @@ export default function Products(props: {products: Product[]}) {
             fontSize: 15,
             color: "#8A8A9D",
           }}>{product.name}</p>
-          <p style={{gridArea: "rating"}}>{product.rating}</p>
+          {/*<p style={{gridArea: "rating"}}>{product.rating}</p>*/}
+          <Rating value={product.rating}/>
           <Price value={product.price}/>
         </div>
       )}

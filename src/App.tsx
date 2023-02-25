@@ -36,10 +36,15 @@ export default function App() {
       <SideNavigation categories={["Sale", "New arrivals", "Popular"]}/>
       <Products products={[
         {name: "Apep Pro Max III", price: 10, rating: 0.75},
-        {name: "Apep Pro Max III", price: 10, rating: 0.75},
-        {name: "Apep Pro Max III", price: 10, rating: 0.75},
-        {name: "Apep Pro Max III", price: 10, rating: 0.75},
-        {name: "Apep Pro Max III", price: 10, rating: 0.75},
+        {name: "Apep Pro Max III", price: 10, rating: 0.7},
+        {name: "Apep Pro Max III", price: 10, rating: 0.8},
+        {name: "Apep Pro Max III", price: 10, rating: 0.9},
+        {name: "Apep Pro Max III", price: 10, rating: 1},
+        {name: "Apep Pro Max III", price: 10, rating: 1},
+        {name: "Apep Pro Max III", price: 10, rating: 1},
+        {name: "Apep Pro Max III", price: 10, rating: 1},
+        {name: "Apep Pro Max III", price: 10, rating: 1},
+        {name: "Apep Pro Max III", price: 10, rating: 1},
       ]}/>
     </div>
   );
