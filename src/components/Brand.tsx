@@ -12,6 +12,7 @@ export default function Brand(props: {
     <div className={"brand"}>
       {props.icons.map((icon, index) =>
         <img
+          key={index}
           className={`item dis-selectable ${index === selectedBrandIndex ? "selected" : ""}`}
           src={icon}
           onClick={() => setSelectedBrandIndex(index)}

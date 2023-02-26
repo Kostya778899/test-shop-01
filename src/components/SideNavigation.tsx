@@ -10,6 +10,7 @@ export default function SideNavigation(props: {
     <div className={"side-navigation"}>
       {props.categories.map((category, index) =>
         <p
+          key={index}
           className={`item dis-selectable ${index === selectedCategoryIndex ? "selected" : ""}`}
           onClick={() => setSelectedCategoryIndex(index)}
         >{category}</p>

@@ -4,15 +4,25 @@ export default function Rating(props: {value: number}) {
   return (
     <div className={"rating"}>
       <div className={"stars"}>
-        {[...Array(5)].map(() => <ColoredStar color={"#EBF0FF"}/>)}
+        <ColoredStars color={"#EBF0FF"} count={5}/>
       </div>
       <div className={"stars"} style={{
         width: `${props.value * 100}%`,
         overflow: "clip",
       }}>
-        {[...Array(5)].map(() => <ColoredStar color={"#FFC833"}/>)}
+        <ColoredStars color={"#FFC833"} count={5}/>
       </div>
     </div>
+  );
+}
+
+function ColoredStars(props: {color: string, count: number}) {
+  return (
+    <>
+      {[...Array(props.count)].map((ass, index) =>
+        <ColoredStar key={index} color={props.color}/>
+      )}
+    </>
   );
 }
 
