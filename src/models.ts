@@ -1,8 +1,21 @@
+//export interface Product {
+//  id: number;
+//  name: string;
+//  price: number;
+//  brand?: any;
+//  images?: string[];
+//  rating: number;
+//}
+
 export interface Product {
   id: number;
-  name: string;
+  title: string;
   price: number;
-  brand?: any;
-  images?: string[];
-  rating: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
 }

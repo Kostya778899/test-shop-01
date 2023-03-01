@@ -5,6 +5,18 @@ p {
   font-family: 'Open Sans', sans-serif;
 }
 
+.main-screen {
+  padding-bottom: 12px;
+  display: grid;
+  grid-template-columns: 53px auto;
+  grid-template-rows: min-content;
+  justify-items: stretch;
+  grid-template-areas:
+    "header header"
+    "side-navigation products";
+  background-color: #FFFFFF;
+}
+
 .dis-selectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -67,18 +79,7 @@ p {
   /*background-color: darkslategrey;*/
 }
 .product {
-  /*width: 335px;*/
-  /*width: 100%;*/
-  /*min-width: 300px;
-  max-width: 500px;
-  height: 335px;*/
-  /*width: 100%;
-  height: 100%;*/
   height: 335px;
-
-  /*position: relative;
-  margin-left: auto;
-  margin-right: 0;*/
 
   box-sizing: border-box;
   padding: 7px 20px 33px 20px;
@@ -87,7 +88,7 @@ p {
   grid-template-columns: auto;
   grid-template-rows: min-content auto min-content min-content;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   grid-template-areas:
     "brand-logo favorite-button"
     "image image"
@@ -99,9 +100,30 @@ p {
   box-shadow: 5px 5px 75px rgba(210, 213, 234, 0.45);
   border-radius: 6px;
 }
+.more-button {
+  width: fit-content;
+  height: fit-content;
+  place-self: center;
+  align-self: end;
+  margin-bottom: 12px;
+  padding: 10px 20px;
+  /*border: none;*/
+  background-color: #313B5D;
+  border-radius: 20px;
+  border: 0 solid #3A63E0;
+  transition: .1s;
+}
+.more-button:hover {
+  border-width: 5px;
+}
+.more-button:active {
+  background-color: #3A63E0;
+}
 
 .price {
   grid-area: price;
+  justify-self: end;
+
   display: flex;
   align-items: end;
 }
